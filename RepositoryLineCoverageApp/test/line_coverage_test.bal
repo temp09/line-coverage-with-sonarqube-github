@@ -4,7 +4,7 @@ import ballerina/test;
 @test:Config
 function testGetLineCoverageSummary() {
     log:printInfo("getLineCoverageSummary()");
-    int recordCount = 5;
+    int recordCount = 1;
     var result = getLineCoverageSummary(recordCount);
     match result {
         json jsonResult => {
