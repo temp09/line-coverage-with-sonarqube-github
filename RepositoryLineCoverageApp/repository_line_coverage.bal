@@ -6,7 +6,7 @@ import wso2/github4;
 
 function main(string... args) {
 
-    json summary = check getLineCoverageSummary(5);
+    json summary = check getLineCoverageSummary(1);
     io:println(summary);
 }
 
@@ -33,7 +33,7 @@ function getLineCoverageSummary(int recordCount) returns json|error {
     };
 
     github4:Organization organization;
-    var gitOrganizationResult = githubEP->getOrganization("wso2");
+    var gitOrganizationResult = githubEP->getOrganization("repname");
     match gitOrganizationResult {
         github4:Organization org => {
             organization = org;
